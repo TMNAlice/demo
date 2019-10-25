@@ -21,7 +21,7 @@ public class PortsConfig {
     private int httpsPort;
 
     @Bean
-    public WebServerFactoryCustomizer containerCustomizer() {
+    public WebServerFactoryCustomizer<ConfigurableServletWebServerFactory> containerCustomizer() {
         return (ConfigurableServletWebServerFactory container) -> {
             if (container instanceof TomcatServletWebServerFactory) {
                 TomcatServletWebServerFactory containerFactory
@@ -36,10 +36,10 @@ public class PortsConfig {
     }
 
     @Bean
-    public WebServerFactoryCustomizer servltContainer () {
-        TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory(){
+    public TomcatServletWebServerFactory servltContainer () {
+        return new TomcatServletWebServerFactory() {
             @Override
-            protected void postProcessContext (org.apache.catalina.Context context){
+            protected void postProcessContext (org.apache.catalina.Context context) {
                 SecurityConstraint securityConstraint = new SecurityConstraint();
                 securityConstraint.setUserConstraint("CONFIDENTIAL");
                 SecurityCollection collection = new SecurityCollection();
@@ -48,6 +48,5 @@ public class PortsConfig {
                 context.addConstraint(securityConstraint);
             }
         };
-        return tomcat;
     }
 }
