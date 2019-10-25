@@ -17,7 +17,7 @@ public class PortsConfig {
     @Value("${server.http.port}")
     private int httpPort;
 
-    @Value("${server.https.port}")
+    @Value("${server.port}")
     private int httpsPort;
 
     @Bean
