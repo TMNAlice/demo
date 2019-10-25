@@ -5,12 +5,11 @@ import org.apache.catalina.connector.Connector;
 import org.apache.tomcat.util.descriptor.web.SecurityCollection;
 import org.apache.tomcat.util.descriptor.web.SecurityConstraint;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
+import org.springframework.boot.web.server.WebServerFactoryCustomizer;
+import org.springframework.boot.web.servlet.server.ConfigurableServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
-import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
-import org.springframework.boot.context.embedded.EmbeddedServletContainerFactory;
-import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
 
 
 @Configuration
@@ -22,13 +21,13 @@ public class PortsConfig {
     private int httpsPort;
 
     @Bean
-    public EmbeddedServletContainerCustomizer containerCustomizer() {
-        return (ConfigurableEmbeddedServletContainer container) -> {
-            if (container instanceof TomcatEmbeddedServletContainerFactory) {
-                TomcatEmbeddedServletContainerFactory containerFactory
-                        = (TomcatEmbeddedServletContainerFactory) container;
+    public WebServerFactoryCustomizer containerCustomizer() {
+        return (ConfigurableServletWebServerFactory container) -> {
+            if (container instanceof TomcatServletWebServerFactory) {
+                TomcatServletWebServerFactory containerFactory
+                        = (TomcatServletWebServerFactory) container;
 
-                Connector connector = new Connector(TomcatEmbeddedServletContainerFactory.DEFAULT_PROTOCOL);
+                Connector connector = new Connector(TomcatServletWebServerFactory.DEFAULT_PROTOCOL);
                 connector.setPort (httpPort);
                 connector.setRedirectPort(httpsPort);
                 containerFactory.addAdditionalTomcatConnectors(connector);
@@ -37,8 +36,8 @@ public class PortsConfig {
     }
 
     @Bean
-    public EmbeddedServletContainerFactory servltContainer () {
-        TomcatEmbeddedServletContainerFactory tomcat = new TomcatEmbeddedServletContainerFactory(){
+    public WebServerFactoryCustomizer servltContainer () {
+        TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory(){
             @Override
             protected void postProcessContext (org.apache.catalina.Context context){
                 SecurityConstraint securityConstraint = new SecurityConstraint();
