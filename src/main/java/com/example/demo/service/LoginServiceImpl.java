@@ -1,7 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.db.dao.UserRepository;
-import com.example.demo.db.model.LoginService;
+import com.example.demo.service.LoginService;
 import com.example.demo.db.model.userm;
 
 import org.springframework.stereotype.Service;
