@@ -16,6 +16,17 @@ app.controller("deviceController", function ($scope, $http) {
             }
         });
     };
+
+    $scope.getList = function () {
+        $http.get('/devicerest').success(function (data, status, headers, config){
+            console.log(data);
+            $scope.deviceList = data;
+        }).error (function (data, status, headers, config){
+            if (data.message ='Time is out') {
+            $scope.finishByTimeout();
+            }
+        });
+    };
 });
 /*
     $scope.successDeleteSchoolCallback = function (response) {
