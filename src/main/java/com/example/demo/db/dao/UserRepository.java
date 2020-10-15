@@ -1,11 +1,10 @@
 package com.example.demo.db.dao;
 
-import com.example.demo.db.model.userm;
+import com.example.demo.db.model.User;
 import org.springframework.data.repository.CrudRepository;
 
-public interface UserRepository
-        extends CrudRepository<userm, Integer> {
+public interface UserRepository extends CrudRepository<User, Integer> {
 
-    userm findByLogin(String login);
+    User findByLogin (String login);
 
 }

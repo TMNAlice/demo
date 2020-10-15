@@ -1,0 +1,163 @@
+#modules {
+  position: fixed;
+  bottom: 100px;
+  left: 0;
+  z-index: 3;
+
+  width: 34px;
+
+  /* width: auto; */
+  height: 200px;
+  overflow: hidden;
+
+  cursor: pointer;
+}
+
+#modules.modules-expanded {
+  width: auto;
+  overflow: visible;
+
+  background: #353535;
+}
+
+#modules-name {
+  position: absolute;
+}
+
+#modules-name-string {
+  position: absolute;
+  top: 89px;
+  left: -83px;
+
+  width: 200px;
+  height: 34px;
+
+  font-weight: bold;
+  font-size: 19px;
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+#modules-name-icon {
+  margin-top: 13px;
+  padding: 5px;
+
+  font-size: 22px;
+}
+
+#modules-list {
+  position: relative;
+  left: 34px;
+
+  width: 100%;
+  height: 100%;
+
+  background: #272727;
+}
+
+.modules-entity {
+  position: relative;
+
+  float: left;
+  box-sizing: border-box;
+  width: 100px;
+  height: 200px;
+
+  background: #242425;
+
+  /* border-right: 1px solid #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.29); */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.48);
+}
+
+.modules-entity-selected > .modules-entity-content {
+  background: #553d6f;
+}
+
+.modules-entity:hover {
+  background: #553d6f;
+}
+
+.modules-entity-title {
+  width: 100%;
+  height: 21px;
+
+  color: #c3c3c3;
+  font-size: 14px;
+  text-align: center;
+
+  background-color: #313131;
+}
+
+.modules-entity-icon {
+  padding: 10px;
+
+  color: #fff;
+  font-size: 64px;
+  font-family: Icomoon;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.modules-entity-content {
+  box-sizing: border-box;
+  height: 87px;
+  padding: 14px 10px 4px;
+
+  color: #cecece;
+
+  background: #242425;
+}
+
+@media (max-height: 712px) {
+  #modules {
+    bottom: 0;
+
+    height: 175px;
+  }
+
+  .modules-entity-content {
+    height: 65px;
+  }
+}
+
+.modules-entity-acc > .modules-entity-icon::before {
+  content: '\e995';
+}
+
+.modules-entity-reference > .modules-entity-icon::before {
+  content: '\e920';
+}
+
+.modules-entity-refbook > .modules-entity-icon::before {
+  content: '\ea71';
+}
+
+.modules-entity-meteo2 > .modules-entity-icon::before {
+  content: '\e9d4';
+}
+
+.modules-entity-planeta > .modules-entity-icon::before {
+  content: '\e9ca';
+}
+
+.modules-entity-atmcl > .modules-entity-icon::before {
+  content: '\eade';
+}
+
+.modules-entity-proxytest > .modules-entity-icon::before {
+  content: '\e956';
+}
+
+.modules-entity-refa > .modules-entity-icon::before {
+  content: '\e956';
+}
+
+.modules-entity-vitrum > .modules-entity-icon::before {
+  content: '\e92e';
+}

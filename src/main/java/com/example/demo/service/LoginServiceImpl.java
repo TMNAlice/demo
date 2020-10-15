@@ -1,14 +1,12 @@
 package com.example.demo.service;
 
 import com.example.demo.db.dao.UserRepository;
-import com.example.demo.service.LoginService;
-import com.example.demo.db.model.userm;
-
-import org.springframework.stereotype.Service;
+import com.example.demo.db.model.User;
+import com.example.demo.service.Logining;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Service;
 
 @Service
 public class LoginServiceImpl implements LoginService {
@@ -17,13 +15,11 @@ public class LoginServiceImpl implements LoginService {
     private UserRepository userRepository;
 
     @Override
-    public UserDetails loadUserByUsername(String string) throws UsernameNotFoundException {
-        userm login = userRepository.findByLogin(string);
-        if (login == null) {
+    public UserDetails loadUserByUsername (String string) throws UsernameNotFoundException{
+        User login = userRepository.findByLogin(string);
+        if(login == null){
             throw new UsernameNotFoundException("user not found");
-       }
-
-        return new MyLogin(login);
+        }
+        return new Logining (login);
     }
-
 }

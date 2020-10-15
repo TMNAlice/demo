@@ -1,0 +1,376 @@
+.cf-wrap {
+  box-sizing: border-box;
+  min-width: 666px;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  padding-top: 35px;
+}
+
+.cf-wrap-line {
+  position: relative;
+
+  clear: both;
+
+  width: 100%;
+  padding-top: 5px;
+  /* overflow: hidden; */
+
+  color: #47748d;
+}
+
+.cf-wrap-line .typecast-text-count {
+  bottom: -7px;
+
+  background-color: rgb(239, 244, 248);
+  box-shadow: 0 0 0 1px #b9b9b9;
+}
+
+.cf-wrap-line_mrgTlow {
+  margin-top: 10px;
+}
+
+.cf-wrap-line_mrgTmid {
+  margin-top: 20px;
+}
+
+.cf-wrap-line_mrgTbig {
+  margin-top: 40px;
+}
+
+.cf-wrap-key {
+  /* float: left;
+	padding: 0px 6px 7px; */
+  padding: 5px 8px 5px;
+
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.cf-wrap-input {
+  /* float: right; */
+  box-sizing: border-box;
+  width: 100%;
+  padding: 3px 10px 3px;
+
+  color: #5b647f;
+  font-size: 14px;
+
+  background-color: #f0f5f9;
+  border: 1px solid #e2e2e2;
+  outline: none;
+  box-shadow: inset 0 0 12px 4px rgba(0, 0, 0, 0.02);
+
+  /* margin-top: -4px; */
+  resize: vertical;
+}
+
+.cf-wrap .typecast-button {
+  margin: 0;
+}
+
+.cf-wrap-checkbox {
+  position: relative;
+
+  float: left;
+
+  background: #5b647f;
+}
+
+.cf-wrap-checkbox .eris-checkbox,
+.cf-wrap-checkbox .eris-checkbox-square {
+  color: #c9ced2;
+}
+
+.cf-wrap .eris-checkboxlist-button {
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+
+  background: #5b647f;
+}
+
+.cf-wrap .eris-matchbox-editable > input {
+  color: #93a1ca;
+
+  background: #5b647f;
+  border: 1px solid #68718a;
+}
+
+.cf-table {
+  position: relative;
+
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 20px;
+  padding: 0 2px 0 0 !important;
+
+  color: #93a1ca;
+
+  border-collapse: collapse;
+}
+
+.cf-th {
+  box-sizing: border-box;
+  padding: 4px 10px 4px;
+
+  color: #f0f5f9;
+  text-transform: uppercase;
+
+  background: #5b647f;
+  border-left: 1px solid #3c4771;
+}
+
+.cf-td {
+  box-sizing: border-box;
+  padding: 4px 10px 4px;
+
+  border-left: 1px solid #3c4771;
+}
+
+.cf-td input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 4px 10px 4px;
+
+  background: transparent;
+  border: none;
+}
+
+.cf-td .eris-checkbox {
+  color: rgb(228, 228, 228);
+}
+
+.cf-line {
+  width: 100%;
+
+  background: #333a54;
+  border: 1px solid #2a3350;
+  border-bottom: 0;
+}
+
+.cf-remove {
+  top: 4px;
+  z-index: 2;
+
+  width: 26px;
+  height: 20px;
+  padding-left: 8px;
+
+  color: #ff4c4c;
+  text-align: center;
+
+  cursor: pointer;
+}
+
+.cf-remove:hover {
+  color: #ff3a3a;
+}
+
+.cf-remove::after {
+  font-size: 16px;
+  font-family: Icomoon;
+
+  content: '\e9ad';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cf-add {
+  position: absolute;
+  top: -20px;
+  left: 1px;
+  z-index: 3;
+
+  width: 20px;
+  height: 20px;
+
+  text-align: center;
+
+  background: #5b647f;
+  cursor: pointer;
+}
+
+.cf-add::after {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+
+  color: #fff;
+  font-size: 10px;
+  font-family: Icomoon;
+  text-align: center;
+
+  content: '\ea0a';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cf-isIp {
+  min-width: 90px;
+}
+
+.cf-sync {
+  color: #fff;
+  text-align: center;
+
+  cursor: pointer;
+}
+
+.cf-sync:hover {
+  color: #ff9b00;
+}
+
+.cf-sync::after {
+  top: 5px;
+  left: 5px;
+
+  font-size: 14px;
+  font-family: Icomoon;
+  text-align: center;
+
+  content: '\e982';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cf-hosts-table {
+  position: relative;
+
+  box-sizing: border-box;
+  width: 100%;
+  height: 45px;
+  margin-top: 20px;
+  padding: 0 2px 0 0 !important;
+
+  color: #93a1ca;
+}
+
+.cf-hosts-line {
+  position: relative;
+
+  float: left;
+  width: 100%;
+
+  background: #333a54;
+  border: 1px solid #2a3350;
+  border-bottom: 0;
+}
+
+.cf-hosts-remove {
+  position: absolute;
+  top: 6px;
+  right: 4px;
+  z-index: 2;
+
+  width: 20px;
+  height: 20px;
+
+  color: #e94b4b;
+
+  cursor: pointer;
+}
+
+.cf-hosts-remove:hover {
+  color: #ff4c4c;
+}
+
+.cf-hosts-remove::after {
+  font-size: 16px;
+  font-family: Icomoon;
+
+  content: '\e9ad';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cf-hosts-left {
+  float: left;
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
+  padding: 4px 10px 4px;
+}
+
+.cf-hosts-right {
+  position: absolute;
+  left: 50%;
+
+  width: 50%;
+  height: 100%;
+
+  border-left: 1px solid #2a3350;
+}
+
+.cf-hosts-right input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+
+  background: transparent;
+  border: none;
+  box-shadow: inset 0 0 4px #000;
+}
+
+.cf-hosts-suggestions {
+  position: absolute;
+  left: -1px;
+  z-index: 2;
+
+  display: none;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+
+  background: #fff;
+  border: 1px solid #4782ea;
+  box-shadow: 0 0 4px #4782ea63;
+}
+
+.cf-hosts-suggestions-entity {
+  padding: 1px 4px 1px;
+
+  cursor: pointer;
+}
+
+.cf-hosts-suggestions-entity:hover {
+  background: #d5e2ff;
+}
+
+.cf-hosts-suggestions-entity-selected {
+  color: #f0f5f9;
+
+  background: #4782ea !important;
+}
+
+.cf-hosts-add {
+  position: absolute;
+  top: -20px;
+  left: 1px;
+  z-index: 3;
+
+  width: 20px;
+  height: 20px;
+
+  text-align: center;
+
+  background: #5b647f;
+  cursor: pointer;
+}
+
+.cf-hosts-add::after {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+
+  color: #fff;
+  font-size: 10px;
+  font-family: Icomoon;
+  text-align: center;
+
+  content: '\ea0a';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

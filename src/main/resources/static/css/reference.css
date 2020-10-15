@@ -1,0 +1,226 @@
+.dialog-permissions {
+  position: static;
+
+  margin-top: 27px;
+  margin-bottom: 33px;
+  padding-bottom: 0;
+  overflow: visible !important;
+
+  border-collapse: collapse;
+}
+
+.dialog-permissions th {
+  padding: 6px 4px 4px;
+
+  border: 1px solid #d4d4d4;
+}
+
+.dialog-permissions td {
+  padding: 4px 12px 6px;
+
+  border: 1px solid #d4d4d4;
+}
+
+.dialog-permissions td:first-of-type {
+  width: 38px;
+  padding: 0;
+
+  background: rgba(0, 0, 0, 0.14);
+}
+
+td.permission-name,
+td.permission-row {
+  padding: 0;
+}
+
+td.permission-inherit {
+  padding: 0 12px;
+}
+
+.permission-inherit-label {
+  display: block;
+  padding: 8px 0 8px;
+}
+.permission-name-label {
+  display: block;
+  padding: 8px 12px 8px;
+}
+.permission-row-label {
+  display: block;
+  padding: 8px 0 8px;
+}
+
+.permission-inherit,
+.permission-levels {
+  position: relative;
+
+  width: 27%;
+
+  text-align: end;
+}
+
+.permission-inherit {
+  width: 30%;
+}
+
+.dialog-permissions select {
+  box-sizing: border-box;
+  width: 92%;
+  margin: 0;
+
+  vertical-align: -webkit-baseline-middle;
+
+  border: 0 dotted #fff;
+}
+
+.dialog-permissions input {
+  margin-right: 12px;
+  margin-left: auto;
+
+  border: 0 dotted #fff;
+}
+
+.tools-count {
+  top: 4px !important;
+
+  color: #93a1ca !important;
+  font-weight: bold !important;
+  font-size: 9px !important;
+  font-family: inherit !important;
+}
+
+.eris-tree-open > .eris-tree-tools > .tools-count {
+  color: #f0f5f9 !important;
+}
+
+.tools-fav::after {
+  content: '\e946';
+}
+
+.tools-refresh::after {
+  content: '\ea2e';
+}
+
+.permission-select-label::before,
+.permission-select-label-inherit::before {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  font-size: 14px;
+  font-family: Icomoon;
+}
+
+.permission-select-label[value="1"]::before {
+  color: #ffc314;
+
+  content: "\e9ce";
+}
+
+.permission-select-label[value="0"]::before {
+  color: #ff4c4c;
+
+  content: "\ea0e";
+}
+
+.permission-select-label[value="3"]::before {
+  color: #509dff;
+
+  content: "\e905";
+}
+
+.permission-select-label-inherit[value="1"]::before {
+  color: #ffc314;
+
+  content: "\e9bc";
+}
+
+.permission-inherit .typecast-input {
+  margin: 0 auto;
+}
+
+.permission-label-on input[type="checkbox"].typecast-input,
+.permission-label-off input[type="checkbox"].typecast-input {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+
+  clip: rect(0 0 0 0);
+}
+
+.permission-label-on,
+.permission-label-off {
+  position: absolute;
+  top: 6px;
+
+  display: inline-block;
+  min-width: 35px;
+
+  color: #484f65;
+  text-align: center;
+}
+
+.permission-label-on {
+  left: 12px;
+
+  padding: 2px 4px;
+
+  background-color: #dadada;
+  border-radius: 3px 0 0 3px;
+}
+
+.permission-label-off {
+  left: 55px;
+
+  padding: 2px 4px;
+
+  background-color: #dadada;
+  border-left: 1px solid black;
+  border-radius: 0px 3px 3px 0;
+}
+
+.permission-label-on:hover,
+.permission-label-off:hover {
+  background-color: #e6e6e6;
+}
+
+.permissions-dialog-expandable-editable__all {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  left: 20px;
+  z-index: 1;
+
+  background: #3b4461;
+}
+
+.permissions-dialog-expandable-editable__head {
+  position: absolute;
+  top: 27px;
+  right: 0px;
+  left: 20px;
+  z-index: 1;
+
+  background: #3b4461;
+}
+
+.permissions-dialog-expandable-head,
+.permissions-dialog-expandable-bottom {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+th.permissions-dialog-expandable-select {
+  width: 38px;
+  padding: 0;
+}
+
+th.permissions-dialog-expandable-access {
+  width: 27%;
+}
+th.permissions-dialog-expandable-inherit {
+  width: 30%;
+}

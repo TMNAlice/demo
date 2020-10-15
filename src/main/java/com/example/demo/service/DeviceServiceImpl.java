@@ -1,6 +1,4 @@
-package com.example.demo.service;
-
-import org.springframework.beans.factory.annotation.Autowired;
+package com.example.demo.service;import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.db.dao.DeviceRepository;
@@ -16,19 +14,32 @@ public class DeviceServiceImpl implements DeviceService {
 
         @Override
         public Iterable<devm> listAll() {
-            return deviceRepository.findAll();
+
+                return deviceRepository.findAll();
+
         }
 
-         /*@Override
+        @Override
         public void deleteById(Integer id) {
             deviceRepository.deleteById(id);
         }
 
         @Override
-        public devm add(Integer number, String name) {
-            return deviceRepository.save(new devm(number, name));
-        }*/
+        public devm add(Integer id, Integer number, String name) {
+                return deviceRepository.save(new devm(id, number, name));
+        }
+
+        @Override
+        public void mody (Integer id, Integer number, String name) {
+
+                devm tempr = findById(id).orElse(new devm(id, number,name));
+                tempr.setId(id);
+                tempr.setNumber(number);
+                tempr.setName(name);
+                deviceRepository.save(tempr);
+        };
 
         @Override
         public Optional<devm> findById(Integer id) { return deviceRepository.findById(id); }
+
 }

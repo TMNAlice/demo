@@ -1,0 +1,47 @@
+body,
+.iframe-body {
+  font-size: 16px !important;
+}
+
+.iframe-body {
+  position: initial;
+}
+
+#view-wrap {
+  border: none;
+}
+
+.indexdoc li,
+.type-fill {
+  color: #111 !important;
+  font-size: 16px !important;
+
+  background: #fff !important;
+}
+
+.indexdoc > li > span {
+  padding-right: 0 !important;
+
+  font-size: 16px !important;
+}
+
+.indexdoc li > div {
+  display: none;
+}
+
+.head li,
+#content-hash .head li {
+  color: #111 !important;
+
+  background: #fff !important;
+}
+
+.balloon-block {
+  color: #fff !important;
+
+  background: #543333 url('../../../images/red-balloon.png') no-repeat 4px 1px;
+}
+
+.iframe-body .head {
+  page-break-after: always;
+}

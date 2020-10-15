@@ -1,0 +1,33 @@
+#catalog-toolbar-search {
+  font-size: 13px;
+}
+
+.eris-tree-title {
+  font-size: 13px;
+}
+
+.eris-tree-type-link .eris-tree-icon::after {
+  position: absolute;
+  top: 7px;
+  right: -2px;
+  *bottom: -2px;
+  *left: -2px;
+
+  padding: 2px;
+
+  color: #c9cad2;
+  font-weight: bold;
+  font-size: 7px;
+
+  background: transparent;
+
+  content: '\e9cb';
+}
+
+.eris-tree-type-pdf .eris-tree-icon::before {
+  color: #509dff;
+}
+
+.eris-tree-type-html .eris-tree-icon::before {
+  color: #509dff;
+}

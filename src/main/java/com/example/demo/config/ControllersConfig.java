@@ -1,7 +1,6 @@
 package com.example.demo.config;
 
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -9,12 +8,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class ControllersConfig implements WebMvcConfigurer {
 
     @Override
-
     public void addViewControllers(ViewControllerRegistry registry) {
-        
         registry.addViewController("/").setViewName("device");
         registry.addViewController("/login").setViewName("login");
-
     }
 
 }

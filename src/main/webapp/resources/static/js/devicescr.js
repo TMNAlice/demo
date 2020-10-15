@@ -1,20 +1,31 @@
 var app = angular.module('devices', []);
 
-app.controller("deviceController", function ($scope, $http) {
+app.controller("deviceController", function ($scope, $http, $log) {
 
     $scope.getDevice = function () {
+        $http.get('/la').success(function (data, status, headers, config){
+                $log.log(data);
+                $scope.deviceList = data;
+            }).error (function (data, status, headers, config){
+                if (data.message ='Time is out') {
+                    $scope.finishByTimeout();
+                }
+            });
+    };
+
+    $scope.findDevice = function () {
         var idfromurl = new URL(window.location.href);
         var idl = idfromurl.searchParams.get("id");
         var idfromurl = idl.toString();
-        console.log(idfromurl);
         $http.get('/devicerest/find?id=' + idfromurl).success(function (data, status, headers, config){
-            console.log(data);
+            $log.log(data);
             $scope.deviceList = data;
         }).error (function (data, status, headers, config){
             if (data.message ='Time is out') {
                 $scope.finishByTimeout();
             }
         });
+        return $scope.deviceList;
     };
 });
 /*

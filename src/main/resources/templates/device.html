@@ -1,46 +1,39 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 
-        <title>Devices</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
-        <script src="/resources/static/js/devicescr.js"></script>
+    <title>Devices</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="/resources/static/js/devicescr.js"></script>
 
-    </head>
-    <body ng-app="devices" ng-controller="deviceController">
+</head>
+<body ng-app="devices" ng-controller="deviceController">
 
-        <h1>Device description</h1>
-        <div sec:authorize="isAnonymus()">
-           <h1><a href="/login">Login</a></h1>
-        </div>
+<h1>Device description</h1>
 
-        <div sec:authorize="isAuthorized()">
-            <input type="button" value="Добавить" ng-click=""/>
-            <input type="button" value="Редактировать" ng-click=""/>
-            <input type="button" value="Удалить" ng-click=""/>
-        </div>
-
-        <div ng-controller="getDevice">
-            <table id="devicesTable" class="table table-hover" width="100%">
-                <thead>
-                    <tr>
-                        <th><h2>Номер</h2></th>
-                        <th><h2>Название</h2></th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <tr id="{{device.device_id}}">
-                        <td width="33%">{{deviceList.number}}</td>
-                        <td width="33%">{{deviceList.name}}</td>
-                        <td width="33%">{{deviceList.other}}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </body>
+<div ng-controller = "getDevice">
+    <table id="devicesTable" class="table table-hover" width="100%">
+        <thead>
+        <tr>
+            <th><h2>Номер</h2></th>
+            <th><h2>Название</h2></th>
+            <th><h2>other</h2></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <tr ng-repeat="devm in deviceList" id="{{devm.id}}">
+            <td width="33%">{{devm.number}}</td>
+            <td width="33%">{{devm.name}}</td>
+            <td width="33%">{{devm.other}}</td>
+            <td><!--<input type="button" value="Редактировать"/>--></td>
+            <!--                        <td><input type="button" value="Удалить" ng-click="deleteSchool(school.id)"/></td>-->
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
 </html>

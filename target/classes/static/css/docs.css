@@ -1,0 +1,254 @@
+/* Стили для использования iframe в модуле Документы */
+body {
+  overflow: auto;
+
+  color: #47748d;
+  font-size: 13px;
+  font-family: Tahoma, Verdana, sans-serif;
+
+  *background: #fff;
+}
+
+a {
+  color: #47748d;
+}
+
+a[onclick] {
+  cursor: pointer;
+}
+
+audio {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+div.img pre {
+  width: 520px;
+  margin: 20px auto;
+}
+
+table {
+  width: 100%;
+  margin: 20px auto;
+
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.blockscroll {
+  display: block;
+  overflow: auto;
+}
+
+.block {
+  *outline: solid black 1px;
+}
+
+.block td {
+  border: solid black 1px;
+}
+
+tr.first:hover,
+tr.medium:hover,
+tr.last:hover {
+  background-color: rgba(218, 217, 219, 0.64);
+}
+
+tr.first {
+  vertical-align: top;
+
+  border-bottom-style: hidden;
+}
+
+tr.medium {
+  vertical-align: top;
+
+  border-top-style: hidden;
+  border-bottom-style: hidden;
+}
+
+tr.last {
+  vertical-align: top;
+
+  border-top-style: hidden;
+}
+
+div.body {
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-left: 15px;
+
+  /* margin-bottom:300px; */
+}
+
+div.pre {
+  margin: 20px 0;
+  padding: 20px;
+
+  background-color: rgb(255, 254, 249);
+}
+
+div.img {
+  padding: 5px;
+  overflow-x: auto;
+}
+
+p {
+  margin: 0;
+
+  font-size: inherit;
+}
+
+p.ident {
+  text-align: justify;
+  text-indent: 30px;
+}
+
+p.forma {
+  margin: 40px 0 20px 0;
+
+  text-align: right;
+}
+
+*:not(.comment) + .comment {
+  margin-top: 20px;
+
+  border-top: solid black 1px;
+}
+
+p.comment {
+  font-style: italic;
+  text-align: justify;
+  text-indent: 30px;
+}
+
+hr.delivery {
+  margin: 60px 0 20px 0;
+
+  border-color: darkblue;
+}
+
+hr.subdelivery {
+  margin: 60px 0 20px 0;
+}
+
+h1 {
+  margin: 60px 0 20px 0;
+
+  font-weight: normal;
+  font-size: medium;
+  text-align: center;
+}
+
+h2 {
+  margin: 40px 0 20px 0;
+
+  font-weight: bold;
+  font-size: small;
+  text-align: center;
+}
+
+h2 a[href] {
+  padding: 20px 0 20px 0;
+}
+
+h3 {
+  margin: 20px 0 20px 0;
+
+  font-weight: normal;
+  font-size: small;
+  text-align: center;
+}
+
+h4 {
+  margin: 20px 0 0 0;
+
+  font-weight: bold;
+  text-align: justify;
+  text-indent: 30px;
+}
+
+.mL { margin-left: 30px; }
+.mT { margin-top: 20px; }
+.mB { margin-bottom: 20px; }
+.aJ { text-align: justify; }
+.aC { text-align: center; }
+.aR { text-align: right; }
+.B { font-weight: bold; }
+.I { font-style: italic; }
+.U { border-bottom: solid black 1px; }
+
+.vaT td {
+  vertical-align: text-top;
+}
+
+.vaC td {
+  vertical-align: middle;
+}
+
+.strong {
+  color: rgb(69, 69, 129);
+  font-weight: bold;
+}
+
+.p5 td {
+  padding: 5px;
+}
+
+.p5LR td {
+  padding: 0 5px;
+}
+
+.balloon-block {
+  margin-bottom: 20px;
+  padding: 3px 6px 4px 34px;
+
+  line-height: 1.6em;
+
+  background: #facdcd url('../../images/red-balloon.png') no-repeat 4px 1px;
+  border: 1px solid #c19999;
+}
+
+.ico {
+  width: 160px;
+  height: 40px;
+}
+
+.Link {
+  list-style-type: circle;
+  cursor: pointer;
+}
+
+ul.head {
+  padding: 1px 0 1px 15px;
+}
+
+#content-hash .head li,
+.head li {
+  margin: 0 0 0 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 10px;
+
+  color: #47748d;
+  font-size: 13px;
+
+  background: #fff;
+  border-top: 1px dotted #a4bed6;
+  border-left: 2px solid #a4bed6;
+}
+
+#content-hash .head li > a,
+.head li > a {
+  padding-left: 0;
+
+  /* color: rgb(150, 150, 179); */
+}
+
+.content-wrap-type-index {
+  display: none;
+}
+
+.content-wrap-type-content {
+  display: none;
+}

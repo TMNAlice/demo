@@ -1,0 +1,645 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: 0;
+}
+
+a,
+img,
+div,
+input {
+  color: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-style: inherit;
+  text-decoration: none;
+
+  outline: none;
+}
+
+input,
+a {
+  font-style: normal;
+}
+
+input:disabled {
+  color: rgb(228, 228, 228);
+}
+
+ol,
+ul {
+  list-style: none;
+  list-style-position: inside;
+}
+
+/* ConfigStart */
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+code,
+.code-core,
+.code-foreground,
+.code-gutter-layer,
+.code-clone,
+.code-wrapper {
+  font-weight: normal;
+  font-size: 15px;
+  font-family: Tahoma, sans-serif;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: 0.2px;
+  text-align: left;
+}
+
+.code-core,
+.code-foreground,
+.code-clone {
+  position: absolute;
+
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding: 7px 7px 7px 45px;
+
+  white-space: pre-wrap;
+
+  border: 0;
+}
+
+.code-core {
+  position: absolute;
+  z-index: 3;
+
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  color: #dadada;
+
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+.code-foreground {
+  position: relative;
+  z-index: 2;
+}
+
+.code-wrapper {
+  z-index: 1;
+}
+
+.code-clone {
+  z-index: 4;
+
+  overflow: hidden;
+
+  background: transparent;
+  opacity: 0;
+
+  resize: none;
+}
+
+.code-caret {
+  margin-left: -2px;
+  padding-left: 3px;
+
+  background: #f4f4f4;
+}
+
+.code-selection {
+  color: rgba(255, 255, 255, 0.18);
+
+  background: rgba(161, 106, 180, 0.31);
+}
+
+code::-moz-selection {
+  background: rgba(161, 106, 180, 0.31);
+}
+
+code *::-moz-selection {
+  background: rgba(161, 106, 180, 0.31);
+}
+
+code::selection {
+  background: rgba(161, 106, 180, 0.31);
+}
+
+code *::selection {
+  background: rgba(161, 106, 180, 0.31);
+}
+
+.code-line {
+  color: transparent;
+}
+
+.code-line-selected {
+  background: #3a3a3a;
+  *opacity: 0;
+}
+
+.code-gutter {
+  position: absolute;
+
+  width: 34px;
+  margin-left: -45px;
+
+  color: #999;
+  text-align: right;
+}
+
+.code-hidden {
+  position: relative;
+}
+
+.code-correction {
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+
+  white-space: pre-wrap;
+
+  border-right: 2px dotted rgba(107, 149, 245, 0.66);
+
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.code-correction-inner {
+  position: relative;
+
+  white-space: pre;
+}
+
+.code-hidden-active {
+  display: none;
+}
+
+.code-toggle {
+  position: relative;
+
+  background: rgba(82, 92, 100, 0.37);
+  cursor: pointer;
+
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.code-toggle:hover {
+  background: rgba(82, 92, 100, 0.77);
+}
+
+.code-toggle > .code-number {
+  color: #6b95f5 !important;
+  text-decoration: underline;
+}
+
+.code-exec {
+  color: #9bc34d;
+}
+
+.code-string {
+  color: #ad9361;
+}
+
+.code-number {
+  color: #e98632;
+}
+
+.code-constant {
+  color: #e98632;
+}
+
+.code-comment {
+  color: #616161;
+}
+
+.code-comment:hover {
+  color: #979797;
+}
+
+.code-function {
+  color: #6b95f5;
+}
+
+.code-args {
+  color: #e98632;
+}
+
+.code-storage {
+  color: #6b95f5;
+}
+
+.code-keyword {
+  color: #6b95f5;
+}
+
+code .code-theme-monokai {
+  font-family: Tahoma;
+}
+
+.code-theme-monokai .code-foreground {
+  font-family: Tahoma;
+}
+
+.code-theme-monokai .code-clone {
+  font-family: Tahoma;
+}
+
+.code-theme-monokai .code-caret {
+  padding-left: 3px;
+
+  background: #f8f8f0;
+}
+
+.code-theme-monokai .code-selection {
+  color: rgba(255, 255, 255, 0);
+
+  background: rgba(189, 188, 178, 0.16);
+}
+
+code .code-theme-monokai::-moz-selection {
+  background: rgba(189, 188, 178, 0.16);
+}
+
+code .code-theme-monokai *::-moz-selection {
+  background: rgba(189, 188, 178, 0.16);
+}
+
+code .code-theme-monokai::selection {
+  background: rgba(189, 188, 178, 0.16);
+}
+
+code .code-theme-monokai *::selection {
+  background: rgba(189, 188, 178, 0.16);
+}
+
+.code-theme-monokai .code-line-selected {
+  background: rgba(189, 188, 178, 0.16);
+}
+
+.code-theme-monokai .code-string {
+  *color: #f7eb61;
+  color: #d1d544;
+}
+
+.code-theme-monokai .code-number {
+  color: #a661c2;
+}
+
+.code-theme-monokai .code-constant {
+  color: #a661c2;
+}
+
+.code-theme-monokai .code-comment {
+  color: #616161;
+}
+
+.code-theme-monokai .code-comment:hover {
+  color: #979797;
+}
+
+.code-theme-monokai .code-function {
+  color: #48beef;
+}
+
+.code-theme-monokai .code-args {
+  color: #fd8520;
+}
+
+.code-theme-monokai .code-storage {
+  color: #48beef;
+}
+
+.code-theme-monokai .code-keyword {
+  color: #f92659;
+}
+
+.eris-console {
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+
+  display: none;
+  width: 100%;
+  height: 60%;
+
+  background: #29292c;
+}
+
+.eris-console > div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 51px;
+  left: 0;
+
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.eris-console > span {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+
+  background: #29292c;
+  border-top: 1px solid #000;
+  -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.eris-console > span > input {
+  position: relative;
+
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 5px 5px 5px 35px;
+
+  color: #979797;
+  font-weight: normal;
+  font-size: 15px;
+  font-family: Tahoma;
+  line-height: 1.2;
+  white-space: pre-wrap;
+
+  background: #2c2c2c;
+  border: 1px solid #222;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 0 15px rgba(37, 37, 37, 1);
+  -moz-box-shadow: inset 0 0 10px rgba(37, 37, 37, 1);
+  box-shadow: inset 0 0 10px rgba(37, 37, 37, 1);
+}
+
+.eris-console > span > input:focus {
+  color: #9bc34d;
+}
+
+.eris-console > div::-webkit-scrollbar-track-piece {
+  -webkit-border-radius: 0;
+}
+
+.eris-console > div::-webkit-scrollbar {
+  width: 16px;
+  height: 10px;
+
+  background-color: transparent;
+}
+
+.eris-console > div::-webkit-scrollbar-thumb {
+  height: 20px;
+
+  background-color: #45474c;
+  -webkit-border-radius: 2px;
+}
+
+.eris-console > div::-webkit-scrollbar-thumb:hover {
+  background-color: #9bc34d;
+}
+
+.eris-clear-shadow {
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.eris-keyboard-icon {
+  position: relative;
+  top: 1px;
+
+  float: left;
+  height: 30px;
+  margin-right: 16px;
+  padding: 0 8px 0;
+
+  font-weight: bold;
+
+  background: #6d6767;
+  cursor: pointer;
+}
+
+.eris-keyboard-icon-disabled {
+  *color: #4b4b4b;
+
+  background: transparent;
+}
+
+.eris-keyboard-icon-disabled:hover {
+  *color: #ffe55e;
+}
+
+.eris-keyboard-icon-editable {
+  *color: #505050;
+
+  background: #f1f1f1;
+}
+
+.eris-keyboard-wrap {
+  position: absolute;
+
+  width: 632px;
+  padding: 4px;
+
+  color: #828999;
+  font-weight: normal;
+  font-size: 14px;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
+  font-style: normal;
+  line-height: 1.2;
+
+  background: #eee;
+
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.eris-keyboard-wrap > li {
+  float: left;
+  width: 36px;
+  height: 36px;
+  margin: 2px;
+
+  line-height: 36px;
+  text-align: center;
+
+  background: #dfdfdf;
+  border: 1px solid #f9f9f9;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.eris-keyboard-wrap > li:hover {
+  background: #f1f1f1;
+}
+
+.eris-keyboard-wrap > li:active {
+  background: #a0a0a0;
+}
+
+.eris-keyboard-wrap > li > span {
+  display: block;
+}
+
+.eris-keyboard-wrap > li > .eris-keyboard-shifted {
+  display: none;
+}
+
+.eris-keyboard-shift > li > span {
+  display: none;
+}
+
+.eris-keyboard-shift > li > .eris-keyboard-shifted {
+  display: block;
+}
+
+.eris-keyboard-shift > li,
+.eris-keyboard-caps > li {
+  text-transform: uppercase;
+}
+
+.eris-keyboard-shift > .eris-keyboard-key-lshift,
+.eris-keyboard-shift > .eris-keyboard-key-rshift {
+  background: #fcec99;
+}
+
+.eris-keyboard-shift > .eris-keyboard-key-lshift:hover,
+.eris-keyboard-shift > .eris-keyboard-key-rshift:hover {
+  background: #ffe55e;
+}
+
+.eris-keyboard-caps > .eris-keyboard-key-capslock {
+  background: #fcec99;
+}
+
+.eris-keyboard-caps > .eris-keyboard-key-capslock:hover {
+  background: #ffe55e;
+}
+
+.eris-keyboard-system > .eris-keyboard-key-system {
+  background: #fcec99;
+}
+
+.eris-keyboard-system > .eris-keyboard-key-system:hover {
+  background: #ffe55e;
+}
+
+.eris-keyboard-language .eris-keyboard-key-language > div {
+  display: block !important;
+}
+
+.eris-keyboard-key-language > div {
+  position: absolute;
+
+  display: none;
+  width: 156px;
+
+  background: #d5d5d5;
+}
+
+.eris-keyboard-key-language > div > div {
+  background: #d5d5d5;
+  border-top: 1px solid #cacaca;
+}
+
+.eris-keyboard-key-language > div > div:hover {
+  background: #ececec;
+  border-top: 1px solid #cacaca;
+}
+
+.eris-keyboard-wrap > .eris-keyboard-key-backspace {
+  width: 80px;
+
+  text-transform: capitalize;
+}
+
+.eris-keyboard-wrap > .eris-keyboard-key-tab {
+  width: 80px;
+
+  text-transform: capitalize;
+}
+
+.eris-keyboard-wrap > .eris-keyboard-key-capslock {
+  width: 94px;
+
+  text-transform: capitalize;
+}
+
+.eris-keyboard-wrap > .eris-keyboard-key-enter {
+  width: 64px;
+
+  text-transform: capitalize;
+}
+
+.eris-keyboard-wrap > .eris-keyboard-key-lshift {
+  width: 110px;
+
+  text-transform: capitalize;
+}
+
+.eris-keyboard-wrap > .eris-keyboard-key-rshift {
+  width: 90px;
+
+  text-transform: capitalize;
+}
+
+.eris-keyboard-wrap > .eris-keyboard-key-space {
+  width: 626px;
+
+  text-transform: capitalize;
+}
+
+.eris-keyboard-wrap > .eris-keyboard-key-language {
+  width: 156px;
+
+  text-transform: capitalize;
+}
+
+.eris-keyboard-wrap > .eris-keyboard-key-system {
+  width: 76px;
+
+  text-transform: capitalize;
+}
+
+.eris-keyboard-wrap > .eris-keyboard-key-left {
+  float: right;
+  width: 76px;
+
+  text-transform: capitalize;
+}
+
+.eris-keyboard-wrap > .eris-keyboard-key-right {
+  float: right;
+  width: 76px;
+
+  text-transform: capitalize;
+}

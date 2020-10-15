@@ -1,0 +1,791 @@
+
+@font-face {
+  font-weight: normal;
+  font-family: 'icomoon';
+  font-style: normal;
+  src: url('/fonts/icomoon.eot?kbir8s');
+  src:
+    url('/fonts/icomoon.eot?kbir8s#iefix') format('embedded-opentype'),
+    url('/fonts/icomoon.ttf?kbir8s') format('truetype'),
+    url('/fonts/icomoon.woff?kbir8s') format('woff'),
+    url('/fonts/icomoon.svg?kbir8s#icomoon') format('svg');
+}
+
+.catalog-toolbar-action {
+  float: left;
+  width: 100%;
+  height: 32px;
+  margin: 0;
+
+  color: #3e4148;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: left;
+
+  background-color: transparent;
+  background-image: none !important;
+  border: 0;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-column-active {
+  color: #828999;
+}
+
+.catalog-toolbar-action-pushed,
+.catalog-toolbar-action-pushed:hover {
+  color: #fff;
+
+  background: #333a54;
+}
+
+.catalog-toolbar-action::before {
+  float: left;
+  padding-right: 10px;
+  padding-left: 6px;
+
+  color: inherit;
+  font-weight: normal;
+  font-size: 20px;
+  font-family: Icomoon;
+}
+
+.catalog-toolbar-action::after {
+  position: absolute;
+  top: 3px;
+  left: 11px;
+  z-index: 1;
+
+  color: #2b313c;
+  font-weight: normal;
+  font-size: 10px;
+  font-family: Icomoon;
+}
+
+.catalog-toolbar-action.icon-column-active:hover {
+  color: #94aab8;
+
+  background: #404040;
+  border: 0;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.catalog-toolbar-actions-extend > .catalog-toolbar-action-selected {
+  color: #6885dc;
+
+  background: #383838;
+}
+
+.catalog-toolbar-actions-extend > .catalog-toolbar-action-selected::before {
+  color: #6885dc;
+}
+
+.catalog-toolbar-actions-extend > .catalog-toolbar-action-selected::after {
+  color: #6885dc;
+}
+
+.catalog-toolbar-action > div > img {
+  width: 0%;
+}
+
+.icon-column-active.overicon-create {
+  color: #509dff;
+
+  /* color: #5a91d8; */
+}
+
+.icon-column-active.overicon-warning {
+  color: #ff4c4c;
+
+  /* color: #d85959; */
+}
+
+.icon-column-active.overicon-fav {
+  color: #ffc314;
+
+  /* color: #d4b24e; */
+}
+
+.icon-column-active.overicon-create:hover {
+  color: #509dff;
+}
+
+.icon-column-active.overicon-warning:hover {
+  color: #ff3a3a;
+}
+
+.icon-column-active.overicon-fav:hover {
+  color: #ffd400;
+}
+
+.icon-create::before {
+  content: '\e931';
+}
+
+.icon-createWidget::before {
+  font-size: 21px;
+
+  content: '\eae8';
+}
+
+.icon-createTemplate::before {
+  content: '\e92e';
+}
+
+.icon-edit::before {
+  content: '\e905';
+}
+
+.icon-editWidget::before {
+  content: '\e905';
+}
+
+.icon-editWidget::after {
+  top: 6px;
+  left: 16px;
+
+  color: #9469ff;
+  font-size: 15px;
+
+  content: '\eae8';
+}
+
+.icon-editTemplate::before {
+  content: '\e905';
+}
+
+.icon-editTemplate::after {
+  top: 6px;
+  left: 16px;
+
+  color: #509dff;
+  font-size: 15px;
+
+  content: '\e92e';
+}
+
+.icon-rename::before {
+  content: '\e905';
+}
+
+.icon-remove::before {
+  content: '\e9ad';
+}
+
+.icon-removeWidget::before,
+.icon-removeBackup::before,
+.icon-removeUser::before,
+.icon-removeTemplate::before {
+  content: '\e9ad';
+}
+
+.icon-createLink::before {
+  content: '\e9cb';
+}
+
+.icon-createLink::after {
+  top: 7px;
+  left: 18px;
+
+  color: inherit;
+  font-size: 12px;
+
+  content: '\ea0a';
+}
+
+.icon-sort::before {
+  content: '\ea48';
+}
+
+.icon-anchor::before {
+  content: '\e9ab';
+}
+
+.icon-importDTree::before {
+  content: '\e960';
+}
+
+.icon-exportMode::before {
+  content: '\ea10';
+}
+
+.icon-export::before {
+  content: '\eafa';
+}
+
+.icon-restore::after {
+  content: '\e966';
+}
+
+.icon-restore::before {
+  content: '\e9ad';
+}
+
+.icon-destroy::after {
+  content: '\ea0f';
+}
+
+.icon-destroy::before {
+  content: '\e9ad';
+}
+
+.icon-restoreAll::after {
+  content: '\e966';
+}
+
+.icon-restoreAll::before {
+  content: '\e9ad';
+}
+
+.icon-destroyAll::after {
+  content: '\ea0f';
+}
+
+.icon-destroyAll::before {
+  content: '\e9ad';
+}
+
+.icon-import::before {
+  content: '\e9c6';
+}
+
+.icon-uploadBackup::before {
+  content: '\e9c3';
+}
+
+.icon-existence::before {
+  content: '\e967';
+}
+
+.icon-existenceTemplate::before {
+  content: '\e967';
+}
+
+.icon-searchAdd::before {
+  content: '\e946';
+}
+
+.icon-searchRefresh::before {
+  content: '\ea2e';
+}
+
+.icon-searchRemove::before {
+  content: '\e946';
+}
+
+.icon-searchRemove::after {
+  top: 1px;
+  left: 2px;
+
+  color: inherit;
+  font-size: 24px;
+
+  content: '\ea0d';
+}
+
+.icon-favAdd::before {
+  content: '\e9d9';
+}
+
+.icon-addFolder::before {
+  content: '\e931';
+}
+
+.icon-favRemove::before {
+  content: '\e9ad';
+}
+
+.icon-favRemoveFolder::before {
+  content: '\e9ad';
+}
+
+.icon-bell::before {
+  content: '\eafc';
+}
+
+.icon-bell::after {
+  top: 6px;
+  left: 16px;
+  color: #509dff;
+  font-size: 15px;
+  content: '\e967';
+  transform: rotate(85deg);
+}
+
+.icon-updateall::before {
+  content: '\eafc';
+}
+
+.icon-updateall::after {
+  top: 6px;
+  left: 16px;
+  color: #509dff;
+  font-size: 12px;
+  font-weight: bold;
+  content: '\ea2e';
+  transform: rotate(30deg);
+}
+
+.icon-bind::before {
+  content: '\e9cb';
+}
+
+.icon-fullscreen::before {
+  content: '\e989';
+}
+
+.icon-copyTemplate::before {
+  content: '\e92c';
+}
+
+.icon-copyLayer::before {
+  content: '\e92c';
+}
+
+.icon-print::before {
+  content: '\e954';
+}
+
+/* content-header */
+.eris-checkbox > .eris-checkbox-square::before {
+  margin-left: -4px;
+
+  font-size: 17px;
+  font-family: Icomoon;
+  line-height: 0.8;
+  text-align: center;
+
+  background-image: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.eris-checkbox.icon-index > .eris-checkbox-square::before {
+  content: '\e920';
+}
+
+.eris-checkbox.icon-content > .eris-checkbox-square::before {
+  content: '\e926';
+}
+
+/* content-header end */
+
+/* catalog-search */
+#catalog-toolbar-search-appendix-expand {
+  font-size: 22px;
+  font-family: Icomoon;
+  line-height: 1.3;
+  text-align: center;
+
+  background-image: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#catalog-toolbar-search-appendix-expand::before {
+  content: '\e994';
+}
+
+/* catalog-search end */
+.eris-tree-icon {
+  top: 1px;
+  z-index: 2;
+
+  /* margin-left: -2px; */
+  font-size: 16px;
+  font-family: Icomoon;
+  text-align: center;
+
+  background-image: none !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.eris-tree-leaf .eris-tree-icon::before {
+  content: '\e926';
+}
+
+.eris-tree-type-pdf .eris-tree-icon::before {
+  color: #9469ff;
+
+  /* color: #509dff; */
+  font-weight: lighter;
+
+  content: '\eadf';
+}
+
+.eris-tree-type-html .eris-tree-icon::before {
+  color: #509dff;
+
+  content: '\e926';
+}
+
+.eris-tree-type-spreadsheet_standart .eris-tree-icon::before {
+  color: #509dff;
+
+  content: '\ea71';
+}
+
+.eris-tree-type-index .eris-tree-icon::before {
+  /* color: #6694ff;
+  content: '\ea7a'; */
+}
+
+.eris-tree-type-widget .eris-tree-icon::before {
+  color: #9469ff;
+  font-weight: lighter;
+
+  content: '\eae8';
+}
+
+.eris-tree-type-template .eris-tree-icon::before {
+  color: #6694ff;
+  font-weight: lighter;
+
+  /* content: '\eacd'; */
+  content: '\e92e' !important;
+}
+
+.eris-tree-type-users .eris-tree-icon::before {
+  color: #ffc314;
+  font-weight: lighter;
+
+  content: '\e972';
+}
+
+.eris-tree-type-user .eris-tree-icon::before {
+  color: #f1ff14;
+  font-weight: lighter;
+
+  content: '\e971';
+}
+
+.eris-tree-type-users.eris-tree-draft .eris-tree-icon::before {
+    color: rgb(147, 161, 202);
+}
+
+.eris-tree-type-user .eris-tree-icon.eris-tree-icon-dev::before {
+  color: #ff9b19;
+
+  content: '\e972';
+}
+
+.eris-tree-type-role .eris-tree-icon::before {
+  color: #6694ff;
+  font-weight: lighter;
+
+  content: '\e972';
+}
+
+.eris-tree-type-module .eris-tree-icon::before {
+  color: #5cb92e;
+  font-weight: lighter;
+
+  content: '\e92e';
+}
+
+.eris-tree-type-host .eris-tree-icon::before {
+  color: #9469ff;
+  font-weight: lighter;
+
+  content: '\e957';
+}
+
+.eris-tree-type-host .eris-tree-icon.eris-tree-icon-role_off::before {
+  color: #ff4c4c;
+}
+
+.eris-tree-icon::after {
+  position: absolute;
+  right: -1px;
+  bottom: 0;
+
+  padding: 2px;
+
+  font-weight: bold;
+  font-size: 7px;
+
+  background: #2e2e50;
+  border-radius: 8px;
+}
+
+.eris-tree-type-link .eris-tree-icon::after {
+  /* color: #809aff; */
+  content: '\e9cb';
+}
+
+.eris-tree-type-fav .eris-tree-icon::after {
+  /* color: #ff9b00; */
+  content: '\e9d9';
+}
+
+.eris-tree-primary .eris-tree-icon::after {
+  /* color: #ff9b00; */
+  content: '\e9d9';
+}
+
+.eris-tree-folder .eris-tree-icon::before {
+  /* color: inherit; */
+  content: '\e92f';
+}
+
+.eris-tree-folder-open .eris-tree-icon::before {
+  /* color: inherit; */
+  content: '\e930';
+}
+
+.eris-tree-folder-open.eris-tree-type-html .eris-tree-icon::after {
+  /* color: #6694ff;
+  content: '\e926'; */
+}
+
+.eris-tree-folder.eris-tree-type-html .eris-tree-icon::after {
+  /* color: #6694ff;
+  content: '\e926'; */
+}
+
+.eris-tree-folder.eris-tree-type-users .eris-tree-icon::before {
+  content: '\e972';
+}
+
+.eris-tree-loading .eris-tree-icon {
+  background-image: none !important;
+  opacity: 1 !important;
+}
+
+@-webkit-keyframes eris-tree-icon-spinner {
+  0% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }
+}
+
+@keyframes eris-tree-icon-spinner {
+  0% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }
+}
+
+.eris-tree-loading .eris-tree-icon::before {
+  position: absolute;
+  left: 0;
+
+  background-image: none !important;
+  opacity: 1 !important;
+
+  -webkit-animation: eris-tree-icon-spinner 2s linear infinite;
+  animation: eris-tree-icon-spinner 2s linear infinite;
+
+  content: '\e97f' !important;
+}
+
+.tree-drive-main > .eris-tree-inner > .eris-tree-header.eris-tree-folder-open > .eris-tree-icon::before {
+  color: #ff9b00;
+
+  content: '\e920';
+}
+
+.tree-drive-main > .eris-tree-inner > .eris-tree-header > .eris-tree-icon::before {
+  color: #ff9b00;
+
+  content: '\e92f';
+}
+
+.tree-drive-recycle > .eris-tree-inner > .eris-tree-header > .eris-tree-icon::before {
+  color: #ff9b00;
+
+  content: '\e9ac';
+}
+
+.tree-drive-backup > .eris-tree-inner > .eris-tree-header > .eris-tree-icon::before {
+  color: #ff9b00;
+
+  content: '\e92b';
+}
+
+.tree-drive-search > .eris-tree-inner > .eris-tree-header > .eris-tree-icon::before {
+  color: #ff9b00;
+
+  content: '\e986';
+}
+
+.tree-drive-fav > .eris-tree-inner > .eris-tree-header > .eris-tree-icon::before {
+  color: #ff9b00;
+
+  content: '\e9d9';
+}
+
+.tree-drive-templates > .eris-tree-inner > .eris-tree-header > .eris-tree-icon::before {
+  color: #ff9b00;
+
+  /* content: '\eacd'; */
+  content: '\e92e';
+}
+
+.tree-drive-widgets > .eris-tree-inner > .eris-tree-header > .eris-tree-icon::before {
+  color: #ff9b00;
+
+  content: '\eae8';
+}
+
+.tree-drive-users > .eris-tree-inner > .eris-tree-header > .eris-tree-icon::before {
+  color: #ff9b00;
+
+  content: '\e971';
+}
+
+.tree-drive-phpmyadmin > .eris-tree-inner > .eris-tree-header > .eris-tree-icon::before {
+  color: #ff9b00;
+
+  content: '\e964';
+}
+
+.tree-drive-synchronization > .eris-tree-inner > .eris-tree-header > .eris-tree-icon::before {
+  color: #ff9b00;
+
+  content: '\e982';
+}
+
+.tree-drive-modules > .eris-tree-inner > .eris-tree-header > .eris-tree-icon::before {
+  color: #ff9b00;
+
+  content: '\e92e';
+}
+
+.tree-drive-roles > .eris-tree-inner > .eris-tree-header > .eris-tree-icon::before {
+  color: #ff9b00;
+
+  content: '\e972';
+}
+
+.tree-drive-hosts > .eris-tree-inner > .eris-tree-header > .eris-tree-icon::before {
+  color: #ff9b00;
+
+  content: '\e957';
+}
+
+.tree-drive-debuglayers {
+  display: none;
+}
+
+.typecast-button-aligned::after {
+  position: relative;
+
+  display: block;
+  float: right;
+  margin-left: 10px;
+
+  font-size: 16px;
+  font-family: Icomoon;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.typecast-button-link::after {
+  content: '\e967';
+}
+
+.typecast-button-editlink::after {
+  content: '\e905';
+}
+
+.eris-checkbox-square::before {
+  font-size: 16px;
+  font-family: Icomoon;
+  text-align: center;
+
+  background-image: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.catalog-toolbar-search-type1 > .eris-checkbox-square::before {
+  content: '\eaf4';
+}
+
+.catalog-toolbar-search-type2 > .eris-checkbox-square::before {
+  content: '\eaf0';
+  *content: '\e92e';
+}
+
+.catalog-toolbar-search-type3 > .eris-checkbox-square::before {
+  content: '\eaf2';
+}
+
+.catalog-toolbar-search-params-name > .eris-checkbox-square::before {
+  content: '\e977';
+}
+
+.catalog-toolbar-search-params-score > .eris-checkbox-square::before {
+  content: '\e977';
+}
+
+.catalog-toolbar-search-params-asc > .eris-checkbox-square::before {
+  content: '\ea3a';
+}
+
+.catalog-toolbar-search-params-desc > .eris-checkbox-square::before {
+  content: '\ea3e';
+}
+
+.eris-checkboxlist-list .eris-checkbox-active > .eris-checkbox-square::before {
+  font-size: 14px;
+
+  content: ' ';
+}
+
+.eris-checkboxlist-list .eris-checkbox-checked > .eris-checkbox-square::before {
+  font-size: 14px;
+
+  content: '\ea10';
+}
+
+.eris-checkbox-selectable.eris-checkbox-checked > .eris-checkbox-square::before {
+  color: #0003;
+  font-size: 16px;
+
+  content: '\ea1e';
+}
+
+.eris-checkbox-selectable.eris-checkbox-checked:hover > .eris-checkbox-square::before {
+  color: #6885dc;
+}
+
+.eris-checkbox-selected.eris-checkbox-checked > .eris-checkbox-square::before {
+  color: #f4f4f4;
+
+  content: '\ea10';
+}
+
+.eris-checkbox-selected.eris-checkbox-checked:hover > .eris-checkbox-square::before {
+  color: #f4f4f4;
+}
+
+#catalog-toolbar-search-button {
+  font-size: 19px;
+  font-family: Icomoon;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#catalog-toolbar-search-button::before {
+  content: '\e986';
+}

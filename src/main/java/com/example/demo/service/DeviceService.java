@@ -8,10 +8,12 @@ public interface DeviceService {
 
         Iterable<devm> listAll();
 
-        /*void deleteById (Integer id);
+        void deleteById (Integer id);
 
-        devm add(Integer number, String name);*/
+        devm add(Integer id, Integer number, String name);
 
-        Optional<devm> findById(Integer school);
+        Optional<devm> findById(Integer devm);
+
+        void mody (Integer id, Integer number, String name);
 
 }
